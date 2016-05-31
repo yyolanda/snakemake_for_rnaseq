@@ -1,0 +1,79 @@
+# Edit the parameters in this file before running the pipeline
+# PART1: STAR aligner
+# PART2: featureCounts
+# PART3: sample list
+
+# ------------------------------------------------------------
+# 1. STAR aligner parameters
+# likely to be modified
+# - base clip from each end
+clip3pNbases: '10'
+clip5pNbases: '5'
+# - path to genome reference folder
+genomeDir: '/data/local/d01/PROOF/genomes/GRCh38_ERCC/index/'
+# Don't touch! - ENCODE standard options
+outFilterType: 'BySJout'
+outFilterMultimapNmax: '20'
+alignSJoverhangMin: '8'
+alignSJDBoverhangMin: '1'
+outFilterMismatchNmax: '999'
+outFilterMismatchNoverLmax: '0.04'
+alignIntronMin: '20'
+alignIntronMax: '1000000'
+alignMatesGapMax: '1000000'
+readFilesCommand: 'gunzip -c'
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# 2. featureCounts parameters
+# Summarize multiple datasets at the same time:
+# featureCounts -t exon -g gene_id -a annotation.gtf -o counts sample1.bam sample2.bam sample3.bam
+#
+# Perform strand-specific read counting (use '-s 2' if reversely stranded):
+# featureCounts -s 1 -t exon -g gene_id -a annotation.gtf -o counts mapping_results_SE.bam
+#
+# Summarize multiple paired-end datasets:
+# featureCounts -p -t exon -g gene_id -a annotation.gtf -o counts sample1.bam sample2.bam sample3.bam
+#
+# Count the fragments that have fragment length between 50bp and 600bp only:
+# featureCounts -p -P -d 50 -D 600 -t exon -g gene_id -a annotation.gtf -o counts mapping_results_PE.bam
+#
+# Count those fragments that have both ends mapped only:
+# featureCounts -p -B -t exon -g gene_id -a annotation.gtf -o counts mapping_results_PE.bam
+#
+# Exclude chimeric fragments from fragment counting:
+# featureCounts -p -C -t exon -g gene_id -a annotation.gtf -o counts mapping_results_PE.bam
+#
+# Refer to the above description or subread help file for the value of the parameters
+
+typeOfReads: '-p'  # '' for SE reads, '-p' for PE reads
+gtf: '/data/local/d01/PROOF/genomes/GRCh38_ERCC/GRCh38.genome.ercc.gtf'
+featureType: 'exon'
+attributeType: 'gene_id'
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# 3. sample list
+# The name of the list is called "samples".
+# Each sample ID is a key containing a value, which is the path to the fastq file.
+# (Two values are mapped to a key if the reads are paired-end reads.)
+#
+# For example, for single-end reads
+# samples:
+#   sample1: fastq/sample1.fastq.gz
+#   sample2: fastq/sample2.fastq.gz
+#
+# for paired-end reads
+# samples:
+#   sample1:
+#   - fastq/sample1_1.fastq.gz
+#   - fastq/sample1_2.fastq.gz
+#   sample2:
+#   - fastq/sample2_1.fastq.gz
+#   - fastq/sample2_2.fastq.gz
+#
+samples:
+  HI.1141.006.Index_10.56:
+  - fastq/HI.1141.006.Index_10.56_R1.fastq.gz
+  - fastq/HI.1141.006.Index_10.56_R2.fastq.gz
+# ------------------------------------------------------------

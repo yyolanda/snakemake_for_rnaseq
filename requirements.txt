@@ -1,0 +1,15 @@
+# This file may be used to create an environment using:
+# conda create -n workspace -c bioconda --file requirements.txt
+# To install more packages, use:
+# conda install -c bioconda [package name]=[version number]
+
+bcftools=1.2
+bwa=0.7.12
+graphviz=2.38.0
+python=3.4.3
+samtools=1.2
+snakemake=3.4.2
+pyyaml=3.11
+subread=1.5.0
+star=2.5.0a
+fastqc=0.11.4
