@@ -21,7 +21,7 @@ outFilterMismatchNoverLmax: '0.04'
 alignIntronMin: '20'
 alignIntronMax: '1000000'
 alignMatesGapMax: '1000000'
-readFilesCommand: 'gunzip -c'
+readFilesCommand: '' # 'gunzip -c' if the fastq files are compressed
 # ------------------------------------------------------------
 
 # ------------------------------------------------------------
@@ -73,7 +73,7 @@ attributeType: 'gene_id'
 #   - fastq/sample2_2.fastq.gz
 #
 samples:
-  HI.1141.006.Index_10.56:
-  - fastq/HI.1141.006.Index_10.56_R1.fastq.gz
-  - fastq/HI.1141.006.Index_10.56_R2.fastq.gz
+  SRR1550991_PART.fastq:
+  - SRR1550991_PART_1.fastq
+  - SRR1550991_PART_2.fastq
 # ------------------------------------------------------------
