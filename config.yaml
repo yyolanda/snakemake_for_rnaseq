@@ -10,7 +10,7 @@
 clip3pNbases: '10'
 clip5pNbases: '5'
 # - path to genome reference folder
-genomeDir: '/data/local/d01/PROOF/genomes/GRCh38_ERCC/index/'
+genomeDir: '/genomes/GRCh38_ERCC/index/'
 # Don't touch! - ENCODE standard options
 outFilterType: 'BySJout'
 outFilterMultimapNmax: '20'
@@ -21,7 +21,7 @@ outFilterMismatchNoverLmax: '0.04'
 alignIntronMin: '20'
 alignIntronMax: '1000000'
 alignMatesGapMax: '1000000'
-readFilesCommand: '' # 'gunzip -c' if the fastq files are compressed
+readFilesCommand: 'gunzip -c' # 'gunzip -c' if the fastq files are compressed
 # ------------------------------------------------------------
 
 # ------------------------------------------------------------
@@ -47,7 +47,7 @@ readFilesCommand: '' # 'gunzip -c' if the fastq files are compressed
 # Refer to the above description or subread help file for the value of the parameters
 
 typeOfReads: '-p'  # '' for SE reads, '-p' for PE reads
-gtf: '/data/local/d01/PROOF/genomes/GRCh38_ERCC/GRCh38.genome.ercc.gtf'
+gtf: '/genomes/GRCh38_ERCC/GRCh38.genome.ercc.gtf' # path to the genome gtf file
 featureType: 'exon'
 attributeType: 'gene_id'
 # ------------------------------------------------------------
@@ -72,8 +72,408 @@ attributeType: 'gene_id'
 #   - fastq/sample2_1.fastq.gz
 #   - fastq/sample2_2.fastq.gz
 #
+# Here is the sample list of study E-GEOD-60424:
 samples:
-  SRR1550991_PART.fastq:
-  - SRR1550991_PART_1.fastq
-  - SRR1550991_PART_2.fastq
+  SRR1550981:
+  - fastq/SRR1550981_1.fastq.gz
+  - fastq/SRR1550981_2.fastq.gz
+  SRR1550982:
+  - fastq/SRR1550982_1.fastq.gz
+  - fastq/SRR1550982_2.fastq.gz
+  SRR1550983:
+  - fastq/SRR1550983_1.fastq.gz
+  - fastq/SRR1550983_2.fastq.gz
+  SRR1550984:
+  - fastq/SRR1550984_1.fastq.gz
+  - fastq/SRR1550984_2.fastq.gz
+  SRR1550985:
+  - fastq/SRR1550985_1.fastq.gz
+  - fastq/SRR1550985_2.fastq.gz
+  SRR1550986:
+  - fastq/SRR1550986_1.fastq.gz
+  - fastq/SRR1550986_2.fastq.gz
+  SRR1550987:
+  - fastq/SRR1550987_1.fastq.gz
+  - fastq/SRR1550987_2.fastq.gz
+  SRR1550988:
+  - fastq/SRR1550988_1.fastq.gz
+  - fastq/SRR1550988_2.fastq.gz
+  SRR1550989:
+  - fastq/SRR1550989_1.fastq.gz
+  - fastq/SRR1550989_2.fastq.gz
+  SRR1550990:
+  - fastq/SRR1550990_1.fastq.gz
+  - fastq/SRR1550990_2.fastq.gz
+  SRR1550991:
+  - fastq/SRR1550991_1.fastq.gz
+  - fastq/SRR1550991_2.fastq.gz
+  SRR1550992:
+  - fastq/SRR1550992_1.fastq.gz
+  - fastq/SRR1550992_2.fastq.gz
+  SRR1550993:
+  - fastq/SRR1550993_1.fastq.gz
+  - fastq/SRR1550993_2.fastq.gz
+  SRR1550994:
+  - fastq/SRR1550994_1.fastq.gz
+  - fastq/SRR1550994_2.fastq.gz
+  SRR1550995:
+  - fastq/SRR1550995_1.fastq.gz
+  - fastq/SRR1550995_2.fastq.gz
+  SRR1550996:
+  - fastq/SRR1550996_1.fastq.gz
+  - fastq/SRR1550996_2.fastq.gz
+  SRR1550997:
+  - fastq/SRR1550997_1.fastq.gz
+  - fastq/SRR1550997_2.fastq.gz
+  SRR1550998:
+  - fastq/SRR1550998_1.fastq.gz
+  - fastq/SRR1550998_2.fastq.gz
+  SRR1550999:
+  - fastq/SRR1550999_1.fastq.gz
+  - fastq/SRR1550999_2.fastq.gz
+  SRR1551000:
+  - fastq/SRR1551000_1.fastq.gz
+  - fastq/SRR1551000_2.fastq.gz
+  SRR1551001:
+  - fastq/SRR1551001_1.fastq.gz
+  - fastq/SRR1551001_2.fastq.gz
+  SRR1551002:
+  - fastq/SRR1551002_1.fastq.gz
+  - fastq/SRR1551002_2.fastq.gz
+  SRR1551003:
+  - fastq/SRR1551003_1.fastq.gz
+  - fastq/SRR1551003_2.fastq.gz
+  SRR1551004:
+  - fastq/SRR1551004_1.fastq.gz
+  - fastq/SRR1551004_2.fastq.gz
+  SRR1551005:
+  - fastq/SRR1551005_1.fastq.gz
+  - fastq/SRR1551005_2.fastq.gz
+  SRR1551006:
+  - fastq/SRR1551006_1.fastq.gz
+  - fastq/SRR1551006_2.fastq.gz
+  SRR1551007:
+  - fastq/SRR1551007_1.fastq.gz
+  - fastq/SRR1551007_2.fastq.gz
+  SRR1551008:
+  - fastq/SRR1551008_1.fastq.gz
+  - fastq/SRR1551008_2.fastq.gz
+  SRR1551009:
+  - fastq/SRR1551009_1.fastq.gz
+  - fastq/SRR1551009_2.fastq.gz
+  SRR1551010:
+  - fastq/SRR1551010_1.fastq.gz
+  - fastq/SRR1551010_2.fastq.gz
+  SRR1551011:
+  - fastq/SRR1551011_1.fastq.gz
+  - fastq/SRR1551011_2.fastq.gz
+  SRR1551012:
+  - fastq/SRR1551012_1.fastq.gz
+  - fastq/SRR1551012_2.fastq.gz
+  SRR1551013:
+  - fastq/SRR1551013_1.fastq.gz
+  - fastq/SRR1551013_2.fastq.gz
+  SRR1551014:
+  - fastq/SRR1551014_1.fastq.gz
+  - fastq/SRR1551014_2.fastq.gz
+  SRR1551015:
+  - fastq/SRR1551015_1.fastq.gz
+  - fastq/SRR1551015_2.fastq.gz
+  SRR1551016:
+  - fastq/SRR1551016_1.fastq.gz
+  - fastq/SRR1551016_2.fastq.gz
+  SRR1551017:
+  - fastq/SRR1551017_1.fastq.gz
+  - fastq/SRR1551017_2.fastq.gz
+  SRR1551018:
+  - fastq/SRR1551018_1.fastq.gz
+  - fastq/SRR1551018_2.fastq.gz
+  SRR1551019:
+  - fastq/SRR1551019_1.fastq.gz
+  - fastq/SRR1551019_2.fastq.gz
+  SRR1551020:
+  - fastq/SRR1551020_1.fastq.gz
+  - fastq/SRR1551020_2.fastq.gz
+  SRR1551021:
+  - fastq/SRR1551021_1.fastq.gz
+  - fastq/SRR1551021_2.fastq.gz
+  SRR1551022:
+  - fastq/SRR1551022_1.fastq.gz
+  - fastq/SRR1551022_2.fastq.gz
+  SRR1551023:
+  - fastq/SRR1551023_1.fastq.gz
+  - fastq/SRR1551023_2.fastq.gz
+  SRR1551024:
+  - fastq/SRR1551024_1.fastq.gz
+  - fastq/SRR1551024_2.fastq.gz
+  SRR1551025:
+  - fastq/SRR1551025_1.fastq.gz
+  - fastq/SRR1551025_2.fastq.gz
+  SRR1551026:
+  - fastq/SRR1551026_1.fastq.gz
+  - fastq/SRR1551026_2.fastq.gz
+  SRR1551027:
+  - fastq/SRR1551027_1.fastq.gz
+  - fastq/SRR1551027_2.fastq.gz
+  SRR1551028:
+  - fastq/SRR1551028_1.fastq.gz
+  - fastq/SRR1551028_2.fastq.gz
+  SRR1551029:
+  - fastq/SRR1551029_1.fastq.gz
+  - fastq/SRR1551029_2.fastq.gz
+  SRR1551030:
+  - fastq/SRR1551030_1.fastq.gz
+  - fastq/SRR1551030_2.fastq.gz
+  SRR1551031:
+  - fastq/SRR1551031_1.fastq.gz
+  - fastq/SRR1551031_2.fastq.gz
+  SRR1551032:
+  - fastq/SRR1551032_1.fastq.gz
+  - fastq/SRR1551032_2.fastq.gz
+  SRR1551033:
+  - fastq/SRR1551033_1.fastq.gz
+  - fastq/SRR1551033_2.fastq.gz
+  SRR1551034:
+  - fastq/SRR1551034_1.fastq.gz
+  - fastq/SRR1551034_2.fastq.gz
+  SRR1551035:
+  - fastq/SRR1551035_1.fastq.gz
+  - fastq/SRR1551035_2.fastq.gz
+  SRR1551036:
+  - fastq/SRR1551036_1.fastq.gz
+  - fastq/SRR1551036_2.fastq.gz
+  SRR1551037:
+  - fastq/SRR1551037_1.fastq.gz
+  - fastq/SRR1551037_2.fastq.gz
+  SRR1551038:
+  - fastq/SRR1551038_1.fastq.gz
+  - fastq/SRR1551038_2.fastq.gz
+  SRR1551039:
+  - fastq/SRR1551039_1.fastq.gz
+  - fastq/SRR1551039_2.fastq.gz
+  SRR1551040:
+  - fastq/SRR1551040_1.fastq.gz
+  - fastq/SRR1551040_2.fastq.gz
+  SRR1551041:
+  - fastq/SRR1551041_1.fastq.gz
+  - fastq/SRR1551041_2.fastq.gz
+  SRR1551042:
+  - fastq/SRR1551042_1.fastq.gz
+  - fastq/SRR1551042_2.fastq.gz
+  SRR1551043:
+  - fastq/SRR1551043_1.fastq.gz
+  - fastq/SRR1551043_2.fastq.gz
+  SRR1551044:
+  - fastq/SRR1551044_1.fastq.gz
+  - fastq/SRR1551044_2.fastq.gz
+  SRR1551045:
+  - fastq/SRR1551045_1.fastq.gz
+  - fastq/SRR1551045_2.fastq.gz
+  SRR1551046:
+  - fastq/SRR1551046_1.fastq.gz
+  - fastq/SRR1551046_2.fastq.gz
+  SRR1551047:
+  - fastq/SRR1551047_1.fastq.gz
+  - fastq/SRR1551047_2.fastq.gz
+  SRR1551048:
+  - fastq/SRR1551048_1.fastq.gz
+  - fastq/SRR1551048_2.fastq.gz
+  SRR1551049:
+  - fastq/SRR1551049_1.fastq.gz
+  - fastq/SRR1551049_2.fastq.gz
+  SRR1551050:
+  - fastq/SRR1551050_1.fastq.gz
+  - fastq/SRR1551050_2.fastq.gz
+  SRR1551051:
+  - fastq/SRR1551051_1.fastq.gz
+  - fastq/SRR1551051_2.fastq.gz
+  SRR1551052:
+  - fastq/SRR1551052_1.fastq.gz
+  - fastq/SRR1551052_2.fastq.gz
+  SRR1551053:
+  - fastq/SRR1551053_1.fastq.gz
+  - fastq/SRR1551053_2.fastq.gz
+  SRR1551054:
+  - fastq/SRR1551054_1.fastq.gz
+  - fastq/SRR1551054_2.fastq.gz
+  SRR1551055:
+  - fastq/SRR1551055_1.fastq.gz
+  - fastq/SRR1551055_2.fastq.gz
+  SRR1551056:
+  - fastq/SRR1551056_1.fastq.gz
+  - fastq/SRR1551056_2.fastq.gz
+  SRR1551057:
+  - fastq/SRR1551057_1.fastq.gz
+  - fastq/SRR1551057_2.fastq.gz
+  SRR1551058:
+  - fastq/SRR1551058_1.fastq.gz
+  - fastq/SRR1551058_2.fastq.gz
+  SRR1551059:
+  - fastq/SRR1551059_1.fastq.gz
+  - fastq/SRR1551059_2.fastq.gz
+  SRR1551060:
+  - fastq/SRR1551060_1.fastq.gz
+  - fastq/SRR1551060_2.fastq.gz
+  SRR1551061:
+  - fastq/SRR1551061_1.fastq.gz
+  - fastq/SRR1551061_2.fastq.gz
+  SRR1551062:
+  - fastq/SRR1551062_1.fastq.gz
+  - fastq/SRR1551062_2.fastq.gz
+  SRR1551063:
+  - fastq/SRR1551063_1.fastq.gz
+  - fastq/SRR1551063_2.fastq.gz
+  SRR1551064:
+  - fastq/SRR1551064_1.fastq.gz
+  - fastq/SRR1551064_2.fastq.gz
+  SRR1551065:
+  - fastq/SRR1551065_1.fastq.gz
+  - fastq/SRR1551065_2.fastq.gz
+  SRR1551066:
+  - fastq/SRR1551066_1.fastq.gz
+  - fastq/SRR1551066_2.fastq.gz
+  SRR1551067:
+  - fastq/SRR1551067_1.fastq.gz
+  - fastq/SRR1551067_2.fastq.gz
+  SRR1551068:
+  - fastq/SRR1551068_1.fastq.gz
+  - fastq/SRR1551068_2.fastq.gz
+  SRR1551069:
+  - fastq/SRR1551069_1.fastq.gz
+  - fastq/SRR1551069_2.fastq.gz
+  SRR1551070:
+  - fastq/SRR1551070_1.fastq.gz
+  - fastq/SRR1551070_2.fastq.gz
+  SRR1551071:
+  - fastq/SRR1551071_1.fastq.gz
+  - fastq/SRR1551071_2.fastq.gz
+  SRR1551072:
+  - fastq/SRR1551072_1.fastq.gz
+  - fastq/SRR1551072_2.fastq.gz
+  SRR1551073:
+  - fastq/SRR1551073_1.fastq.gz
+  - fastq/SRR1551073_2.fastq.gz
+  SRR1551074:
+  - fastq/SRR1551074_1.fastq.gz
+  - fastq/SRR1551074_2.fastq.gz
+  SRR1551075:
+  - fastq/SRR1551075_1.fastq.gz
+  - fastq/SRR1551075_2.fastq.gz
+  SRR1551076:
+  - fastq/SRR1551076_1.fastq.gz
+  - fastq/SRR1551076_2.fastq.gz
+  SRR1551077:
+  - fastq/SRR1551077_1.fastq.gz
+  - fastq/SRR1551077_2.fastq.gz
+  SRR1551078:
+  - fastq/SRR1551078_1.fastq.gz
+  - fastq/SRR1551078_2.fastq.gz
+  SRR1551079:
+  - fastq/SRR1551079_1.fastq.gz
+  - fastq/SRR1551079_2.fastq.gz
+  SRR1551080:
+  - fastq/SRR1551080_1.fastq.gz
+  - fastq/SRR1551080_2.fastq.gz
+  SRR1551081:
+  - fastq/SRR1551081_1.fastq.gz
+  - fastq/SRR1551081_2.fastq.gz
+  SRR1551082:
+  - fastq/SRR1551082_1.fastq.gz
+  - fastq/SRR1551082_2.fastq.gz
+  SRR1551083:
+  - fastq/SRR1551083_1.fastq.gz
+  - fastq/SRR1551083_2.fastq.gz
+  SRR1551084:
+  - fastq/SRR1551084_1.fastq.gz
+  - fastq/SRR1551084_2.fastq.gz
+  SRR1551085:
+  - fastq/SRR1551085_1.fastq.gz
+  - fastq/SRR1551085_2.fastq.gz
+  SRR1551086:
+  - fastq/SRR1551086_1.fastq.gz
+  - fastq/SRR1551086_2.fastq.gz
+  SRR1551087:
+  - fastq/SRR1551087_1.fastq.gz
+  - fastq/SRR1551087_2.fastq.gz
+  SRR1551088:
+  - fastq/SRR1551088_1.fastq.gz
+  - fastq/SRR1551088_2.fastq.gz
+  SRR1551089:
+  - fastq/SRR1551089_1.fastq.gz
+  - fastq/SRR1551089_2.fastq.gz
+  SRR1551090:
+  - fastq/SRR1551090_1.fastq.gz
+  - fastq/SRR1551090_2.fastq.gz
+  SRR1551091:
+  - fastq/SRR1551091_1.fastq.gz
+  - fastq/SRR1551091_2.fastq.gz
+  SRR1551092:
+  - fastq/SRR1551092_1.fastq.gz
+  - fastq/SRR1551092_2.fastq.gz
+  SRR1551093:
+  - fastq/SRR1551093_1.fastq.gz
+  - fastq/SRR1551093_2.fastq.gz
+  SRR1551094:
+  - fastq/SRR1551094_1.fastq.gz
+  - fastq/SRR1551094_2.fastq.gz
+  SRR1551095:
+  - fastq/SRR1551095_1.fastq.gz
+  - fastq/SRR1551095_2.fastq.gz
+  SRR1551096:
+  - fastq/SRR1551096_1.fastq.gz
+  - fastq/SRR1551096_2.fastq.gz
+  SRR1551097:
+  - fastq/SRR1551097_1.fastq.gz
+  - fastq/SRR1551097_2.fastq.gz
+  SRR1551098:
+  - fastq/SRR1551098_1.fastq.gz
+  - fastq/SRR1551098_2.fastq.gz
+  SRR1551099:
+  - fastq/SRR1551099_1.fastq.gz
+  - fastq/SRR1551099_2.fastq.gz
+  SRR1551100:
+  - fastq/SRR1551100_1.fastq.gz
+  - fastq/SRR1551100_2.fastq.gz
+  SRR1551101:
+  - fastq/SRR1551101_1.fastq.gz
+  - fastq/SRR1551101_2.fastq.gz
+  SRR1551102:
+  - fastq/SRR1551102_1.fastq.gz
+  - fastq/SRR1551102_2.fastq.gz
+  SRR1551103:
+  - fastq/SRR1551103_1.fastq.gz
+  - fastq/SRR1551103_2.fastq.gz
+  SRR1551104:
+  - fastq/SRR1551104_1.fastq.gz
+  - fastq/SRR1551104_2.fastq.gz
+  SRR1551105:
+  - fastq/SRR1551105_1.fastq.gz
+  - fastq/SRR1551105_2.fastq.gz
+  SRR1551106:
+  - fastq/SRR1551106_1.fastq.gz
+  - fastq/SRR1551106_2.fastq.gz
+  SRR1551107:
+  - fastq/SRR1551107_1.fastq.gz
+  - fastq/SRR1551107_2.fastq.gz
+  SRR1551108:
+  - fastq/SRR1551108_1.fastq.gz
+  - fastq/SRR1551108_2.fastq.gz
+  SRR1551109:
+  - fastq/SRR1551109_1.fastq.gz
+  - fastq/SRR1551109_2.fastq.gz
+  SRR1551110:
+  - fastq/SRR1551110_1.fastq.gz
+  - fastq/SRR1551110_2.fastq.gz
+  SRR1551111:
+  - fastq/SRR1551111_1.fastq.gz
+  - fastq/SRR1551111_2.fastq.gz
+  SRR1551112:
+  - fastq/SRR1551112_1.fastq.gz
+  - fastq/SRR1551112_2.fastq.gz
+  SRR1551113:
+  - fastq/SRR1551113_1.fastq.gz
+  - fastq/SRR1551113_2.fastq.gz
+  SRR1551114:
+  - fastq/SRR1551114_1.fastq.gz
+  - fastq/SRR1551114_2.fastq.gz
 # ------------------------------------------------------------
