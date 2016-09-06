@@ -1,4 +1,4 @@
-# Snakemake pipeline and config file for RNA-sequencing data processing
+# Snakemake pipeline for RNA-sequencing data processing
 
 
 ### Installation
