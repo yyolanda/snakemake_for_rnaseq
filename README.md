@@ -1,6 +1,5 @@
 # Snakemake pipeline and config file for RNA-sequencing data processing
-# -----------------------------------------------------
-# -----------------------------------------------------
+
 
 ### Installation
 
