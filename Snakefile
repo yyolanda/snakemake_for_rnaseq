@@ -21,7 +21,7 @@ configfile: "config.yaml"
 
 # ------------------------------------------------------------------------------
 # PART2: Top Level Rule
-# Generate the final outputs: "counts" and fastQC dignostics
+# Generate the final outputs: "counts" and fastQC diagnostics
 rule all:
     input:
         expand("fastQC/{sample}_fastQC/", sample = config["samples"]),
@@ -51,7 +51,7 @@ rule fastQC:
 # PART4: Alignment with STAR aligner
 # - Edit the parameters in "PART1: STAT aligner" of the config file
 # input: fastq file (2 files if paired-end reads) specified in config file for each sample ID
-# output: one folder per sample ID, with the corresponding .bam file and log files inside
+# output: one folder per sample ID, with corresponding .bam file and log files inside
 rule rnaAlignment:
     input:
         lambda wildcards: config["samples"][wildcards.sample]
